@@ -52,7 +52,7 @@ MI_CONSTANTE="False"
 is_user_logged: bool = True
 print(is_user_logged)
 # pero aun asi se pueden reasignar
-# is_user_logged=20
-# print(is_user_logged)
+is_user_logged=20
+print(is_user_logged)
 
 # una forma de no permitir esto es cambiando la configuracion de nuestro editor en typecheck - cambiar a strict y ahora nos da error el ejemplo anterior (el error solo lo marca el editor, no el interprete)
