@@ -70,3 +70,29 @@ if edad >= 18:
 else:
   print("No puedes ir a la disco 🥲")
 
+
+print("\nCaso especial de 0 y string vacio")
+numero=5
+if numero: # True
+  print("El numero no es cero")
+
+numero=0
+if numero: # False
+  print("El numero es cero")
+
+nombre=""
+if nombre: # False
+  print("Un string vacio es False")
+
+numero=5 # asignacion
+es_el_tres = numero == 3 # type: ignore # comparacion
+if es_el_tres:
+  print("El numero es 3")
+
+
+print("\nCondicion ternaria")
+# es una forma de hacer una sentencia condicional en una sola linea
+# [codigo si cumple la condicion] if[condicion] else[codigo si no cumple la condicion]
+edad=17
+mensaje="Eres mayor de edad" if edad >= 18 else "Eres menor de edad"
+print(mensaje)
