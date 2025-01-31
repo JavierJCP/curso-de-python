@@ -78,4 +78,5 @@ while numero <= n:
     divisor += 1
   if es_primo:
     print(f"{numero} es primo")
+
   numero += 1
