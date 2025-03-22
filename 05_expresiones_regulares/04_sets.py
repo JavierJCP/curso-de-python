@@ -56,8 +56,8 @@ print(matches)
 "lo.que+sea@shopping.online"
 "michael@gov.co.uk"
 
-email = "michael@gov.co.uk"
+email = "míchael@góv.co.uk"
 # pattern= r"[w._%+-]+@[\w.-]+\.[a-zA-Z]{2,4}"
-pattern = r"^[\w._%+-áéíóúÁÉÍÓÚ]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+pattern = r"^[\w._%+-]+@[a-zA-Z0-9áéíóúÁÉÍÓÚ.-]+\.[a-zA-Z]{2,}$"
 matches = re.findall(pattern, email)
 print(matches)
