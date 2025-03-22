@@ -5,8 +5,8 @@
 
 import re
 
-# 1. El punto (.)
-# Coincidir con cualquier caracter excepto una nueva linea
+#* 1. El punto (.)
+#* Coincidir con cualquier caracter excepto una nueva linea
 
 text = "Hola mundo, H0la de nuevo, H$la otra vez"
 pattern = "H.la" # Hola, H0la, H$la
@@ -38,7 +38,8 @@ else:
   print("No se ha encontrado el patrón")
 
 
-# Cómo usar la barra invertida para anular el significado especial de un símbolo
+#* Cómo usar la barra invertida para anular el significado especial de un símbolo
+
 text = "Mi casa es blanca. Y el coche es negro."
 pattern = r"\." #el significado de un . es cualquier caracter, pero con la barra \ anulamos este significado y le indicamos que busque exactamente el punto
 
@@ -63,20 +64,20 @@ found = re.search(pattern, text)
 if found: 
   print(f"Encontré el número de teléfono {found.group()}")
 
-# \w: Coincide con cualquier caracter alfanumerico (a-z, A-Z, 0-9, _)
+#* \w: Coincide con cualquier caracter alfanumerico (a-z, A-Z, 0-9, _)
 
 text = "@el_rubius_69"
 pattern = r"\w"
 found = re.findall(pattern, text)
 print(found)
 
-# \s: Coincide con cualqueir espacio en blanco (espacio, tabulación, salto de línea)
+#* \s: Coincide con cualqueir espacio en blanco (espacio, tabulación, salto de línea)
 text = "Hola mundo\n¿Cómo estás?\t"
 pattern = r"\s"
 matches = re.findall(pattern, text)
 print(matches)
 
-# ^: Coincide con el principio de una cadena
+#* ^: Coincide con el principio de una cadena
 username = "$423_name%22" 
 pattern = r"^\w" # validar nombre de usuario
 
@@ -98,7 +99,7 @@ if valid:
 else: 
   print("El número de teléfono no es válido")
 
-# $: Coincide con el final de una cadena
+#* $: Coincide con el final de una cadena
 text = "Hola mundo."
 pattern = r"mundo$"
 
@@ -128,14 +129,14 @@ matches = re.findall(pattern, files)
 print(matches)
 
 #-----------------------------
-# \b: Coincide con el principio o final de una palabra
+#* \b: Coincide con el principio o final de una palabra
 text = "casa casada cosa cosas casado casa"
 pattern = r"\bc.sa\b"
 
 found = re.findall(pattern, text)
 print(found)
 
-# |: Coincidr con una opción u otra
+#* |: Coincidr con una opción u otra
 fruits = "platano, piña, manzana, aguacate, palta, pera, aguacate, aguacate"
 pattern = r"palta|aguacate|p..a|\b\w{7}\b" 
 
